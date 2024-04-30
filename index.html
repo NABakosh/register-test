@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register</title>
+</head>
+<body>
+    <form class="login">
+        <div class="form-main">
+        <p>Login</p>
+        <input type="text" placeholder="Email or number" id="login">
+        <input type="password" placeholder="Password" id="password">
+    </div>
+    <div class="form-add">
+        <label><input type="checkbox"><span>Remember me</span></label>
+             <span>Forgot Password?</span></div>
+             <button type="button">Login</button>
+             <span>Don't have an account? <a onclick="on('register')">Register</a></span>
+    </form>
+
+    <form class="reg">
+        <div class="register-main">
+            <p>Register</p>
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Login">
+            <input type="password" placeholder="Password" id="password">
+            <input type="password" placeholder="Confirm password" id="password">
+        </div>
+        <div class="register-add">
+            <button type="button">Register</button>
+            <span>Have an Accout? <a onclick="on('login')">Login Here</a></span>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: gray;
+        width:100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-position: center;
+        background-image: url(img/digital-art-background-98hwar6swibxmlqv.jpg);
+        background-size: cover;
+    }
+    .login{
+        width: 40%;
+        height: 60%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap:2%;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+        border:2px solid rgba(255, 255, 255, .2)
+    }
+    .reg{
+        width: 40%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:7%;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+        border:2px solid rgba(255, 255, 255, .2)
+    }
+    .register-main{
+        height: 70%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap:25px;
+    }
+    .register-main input{width: 80%;
+        height: 20%;
+        font-size: 20px;
+        color:rgba(122, 103, 103, 0.267);
+        border: 2px solid rgba(255, 255, 255, .3);
+        border-radius: 20px;
+        padding-left: 4%;
+        background: transparent;
+        
+    }
+    .register-main p{
+        margin-top: 10%;
+        color: white;
+        font-size: 30px;
+    }
+    .register-add{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:15%;
+    }
+    .register-add button{
+        height: 45%;
+    }
+    .form-main{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:50px;
+    }
+    .form-main p{
+        margin-top: 10%;
+        color: white;
+        font-size: 30px;
+    }
+    a{cursor: pointer;}
+    input{background: transparent;}
+    #login{
+        padding-left: 4%;
+        width: 80%;
+        height: 20%;
+        font-size: 20px;
+        color:rgba(122, 103, 103, 0.267);
+        border: 2px solid rgba(255, 255, 255, .3);
+        border-radius: 20px;
+        background: transparent;
+    }
+    #password{
+        padding-left: 4%;
+        width: 80%;
+        height: 20%;
+        font-size: 20px;
+        color:rgba(122, 103, 103, 0.267);
+        border: 2px solid rgba(255, 255, 255, .3);
+        border-radius: 20px;
+    }
+    .form-add{
+        width: 80%;
+        height:5%;
+        display:flex;
+        justify-content: space-between;
+    }
+    .form-add label {
+        margin-left: 10px;
+        display: flex;
+        align-items:center;
+    }
+    .form-add label span{
+        margin-left:10px;
+    }
+    button{
+        width:80%;
+        height: 8%;
+        border:none;
+        border-radius: 20px;
+        border: 2px solid rgba(255, 255, 255, .3);
+        background: transparent;
+        cursor: pointer;
+        font-size:20px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+</style>
